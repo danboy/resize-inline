@@ -1,0 +1,14 @@
+doctype
+html
+  head
+    link(rel="stylesheet", href="/main.css")
+    script.
+      var w = window,
+          d = document,
+          e = d.documentElement,
+          g = d.getElementsByTagName('body')[0],
+          winWidth = w.innerWidth || e.clientWidth || g.clientWidth,
+          winHeight = w.innerHeight|| e.clientHeight|| g.clientHeight;
+      document.write("<style>.image{ position: absolute;left:0;top:0;width:"+winWidth+"px;height:"+winHeight+"px; }</style>");
+  body
+    != yield
